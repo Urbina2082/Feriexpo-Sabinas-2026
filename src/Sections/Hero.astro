@@ -1,0 +1,120 @@
+---
+import { Image } from "astro:assets";
+import Icon from "../assets/icon.avif";
+---
+
+<div class="hero">
+  <div class="menu">
+    <h2>Feriexpo Sabinas 2026</h2>
+  </div>
+  <div class="content">
+    <Image class="imh" src={Icon} alt="Icono" />
+    <h1>FeriExpo <span>Sabinas 2026</span></h1>
+    <p>
+      La fiesta más grande del norte de Mexico te espera. Diversión, música y
+      tradición en un solo lugar.
+    </p>
+    <div class="buts">
+      <button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-calendar"
+          ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect
+            width="18"
+            height="18"
+            x="3"
+            y="4"
+            rx="2"></rect><path d="M3 10h18"></path></svg
+        >PROXIMAMENTE</button
+      >
+    </div>
+  </div>
+</div>
+
+<style>
+  .hero {
+    width: 100%;
+    height: 100vh;
+    background-image:
+      linear-gradient(to top, #000000b0, #00000084), url(/hero.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+  .menu {
+    background: #ffffff05;
+    
+    white-space: nowrap;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 9999;
+    margin: 2.5rem 0rem;
+    padding: 0.5rem 4rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); /* Safari */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+  }
+  .content {
+    padding: 10rem 01rem 0rem;
+  }
+  .imh {
+    width: 150px;
+    border-radius: 25px;
+    height: auto;
+    margin: 1rem 0rem;
+  }
+  h2 {
+    font-size: clamp(1rem, 1.5vw, 1.9rem);
+    margin: 0px 0px;
+    background-image: var(--gradient-title);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  h1 {
+    font-size: clamp(2.9rem, 6vw, 7rem);
+    color: #fff;
+    margin: 0px;
+  }
+  span {
+    background-image: var(--gradient-title);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  p {
+    color: #ffffffa0;
+    font-size: clamp(1.2rem, 1.5vw, 4rem);
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 1rem 3rem;
+    border-radius: 25px;
+    color: #fff;
+    background: #ffffff25;
+    border: 1px solid #ffffff4c;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem auto 0rem;
+    gap: 0.5rem;
+  }
+</style>

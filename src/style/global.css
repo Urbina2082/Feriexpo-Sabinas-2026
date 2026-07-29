@@ -1,0 +1,33 @@
+:root {
+  /* Verdes */
+ 
+  --green-600: #12A34A;
+  
+
+  /* Dorados */
+  --gold-600: #E39F09;
+  
+
+  /* Gradientes */
+  --gradient:
+    radial-gradient(
+      circle at 20% 40%,
+      rgba(31, 169, 86, 0.22),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 78% 58%,
+      rgba(255, 172, 43, 0.18),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #07110a 0%, #0b170e 100%);
+
+     --gradient-title: linear-gradient(
+    90deg,
+    #12A34A 0%,
+    #36B93E 35%,
+    #8DC63F 60%,
+    #E1B11A 85%,
+    #E39F09 100%
+  );
+}
