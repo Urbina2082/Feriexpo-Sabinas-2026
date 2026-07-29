@@ -1,31 +1,52 @@
 ---
-import "../style/global.css"
+import "../style/global.css";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Feriexpo 2026</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta
+      property="og:image"
+      content="https://feriexpo2026.netlify.app/icon.jpg"
+    />
+
+    <meta
+      name="description"
+      content="Página Oficial Feriexpo Sabinas 2026. La fiesta más grande del norte de Mexico te espera."
+    />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/icon.avif" />
+    <link rel="icon" href="/icon.jpg" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BSYKR3K8J"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-2BSYKR3K8J");
+    </script>
+    <meta name="generator" content={Astro.generator} />
+    <title>Feriexpo 2026</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		background-image: var(--gradient);
-		background-position: static;
-		font-family: Arial, Helvetica, sans-serif;
-		
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--gradient);
+    background-position: static;
+    font-family: Arial, Helvetica, sans-serif;
+  }
 </style>
