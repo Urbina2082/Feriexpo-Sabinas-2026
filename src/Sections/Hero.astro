@@ -63,6 +63,8 @@ import Icon from "../assets/icon.avif";
     padding: 0.5rem 4rem;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px); 
+    isolation: isolate;
+    will-change: backdrop-filter;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 25px;
   }
@@ -116,5 +118,7 @@ import Icon from "../assets/icon.avif";
     justify-content: center;
     margin: 3rem auto 0rem;
     gap: 0.5rem;
+    isolation: isolate;
+    will-change: backdrop-filter;
   }
 </style>
