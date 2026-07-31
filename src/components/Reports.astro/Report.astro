@@ -1,0 +1,48 @@
+---
+const { sv, num, p } = Astro.props;
+---
+
+<div class="report">
+  <div set:html={sv} class="im" />
+  <div class="num">{num}</div>
+  <p>{p}</p>
+</div>
+
+<style>
+  .report {
+    display: inline-block;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+     background: #ffffff06;
+    backdrop-filter: blur(50px);
+    color: rgba(255, 255, 255, 0.646);
+    border: 1px solid #ffffff1a;
+    font-weight: 700;
+    max-width: 14rem;
+    width: 100%;
+    
+  }
+
+  .num {
+    font-size: 3rem;
+    font-weight: 600;
+    background-image: var(--gradient-title);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin: .5rem 0rem ;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .im{
+
+    color: var(--green-600);
+  }
+
+   @media (max-width: 768px) {
+
+      .report{
+        width: 100%;
+      }
+  }
+</style>

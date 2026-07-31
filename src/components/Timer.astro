@@ -1,0 +1,96 @@
+---
+
+---
+
+<div class="timer">
+  <div class="sects dias">
+    <span id="day">00</span>
+    <p>Dias</p>
+  </div>
+  <div class="sects dias">
+    <span id="hour">00</span>
+    <p>Horas</p>
+  </div>
+  <div class="sects dias">
+    <span id="minute">00</span>
+    <p>Segundos</p>
+  </div>
+  <div class="sects dias">
+    <span id="second">00</span>
+    <p>Segundos</p>
+  </div>
+</div>
+
+
+  <script>
+    const CountDountDate = new Date("September 12,2026 20:00:00").getTime();
+
+    const updateCountdown = () => {
+      const now = Date.now();
+      const timeLeft = CountDountDate - now;
+
+      if (timeLeft < 0) {
+        clearInterval(timerInterval);
+        document.getElementById("countdown").innerHTML = "El evento ha comenzado!";
+        return;
+      }
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("day").innerHTML = `${days} `;
+      document.getElementById("hour").innerHTML = `${hours} `;
+      document.getElementById("minute").innerHTML = `${minutes} `;
+      document.getElementById("second").innerHTML = `${seconds} `;
+    };
+    const timerInterval = setInterval(updateCountdown, 1000);
+  </script>
+  
+
+<style>
+  .timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0rem 0rem;
+    gap: .8rem;
+  }
+
+  .sects {
+    color: #fff;
+    border-radius: 20px;
+    background: #ffffff22;
+    border: 1px solid #ffffff4c;
+    backdrop-filter: blur(4px);
+    padding: 0.7rem 0rem;
+    width: 100%;
+    max-width: 7rem;
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  p {
+    font-size: clamp(0.8rem, 1vw, 2rem);
+    font-weight: 300;
+    color: #ffffff6b;
+    margin: 0px;
+    display: inline-block;
+  }
+
+  span {
+    background-image: var(--gradient-title);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(2.4rem, 4vw, 6rem);
+    font-weight: 600;
+  }
+</style>
+
+
+

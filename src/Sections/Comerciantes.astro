@@ -1,0 +1,129 @@
+---
+import InitSection from "../components/InitSection.astro";
+import Comerciantess from "../components/Comerciantes/Comerciantess.astro";
+
+const Comerciantes = [
+  {
+    imagen: "/icon.jpg",
+    nombre: "Estandar",
+    op1: "Energía eléctrica básica",
+    op2: "Limpieza de áreas comunes",
+    op3: "Vigilancia nocturna",
+    des: "3m x 3m",
+    price: "$6,000",
+    subprice: "MXN / 10 dias",
+  },
+  {
+    imagen: "/icon.jpg",
+    nombre: "Grande",
+    op1: "Energía eléctrica básica",
+    op2: "Limpieza de áreas comunes",
+    op3: "Vigilancia nocturna",
+    des: "3m x 6m",
+    price: "$10,000",
+    subprice: "MXN / 10 dias",
+  },
+  {
+    imagen: "/icon.jpg",
+    nombre: "Premiun",
+    op1: "Energía eléctrica básica",
+    op2: "Limpieza de áreas comunes",
+    op3: "Vigilancia nocturna",
+    des: "6m x 6m",
+    price: "$18,000",
+    subprice: "MXN / 10 dias",
+  },
+  {
+    imagen: "/icon.jpg",
+    nombre: "Isla Central",
+    op1: "Energía eléctrica básica",
+    op2: "Limpieza de áreas comunes",
+    op3: "Vigilancia nocturna",
+    des: "Isla comercial",
+    price: "$22,000",
+    subprice: "MXN / 10 dias",
+  },
+];
+---
+
+<div class="come">
+  <InitSection
+    sub=""
+    title="Espacios para "
+    sp="Comerciantes"
+    pr="Renta tu espacio y lleva tu negocio a mas de 50,000 visitantes."
+  />
+
+  <div class="car">
+    {
+      Comerciantes.map((artista) => (
+        <Comerciantess
+          im={artista.imagen}
+          nombre={artista.nombre}
+          op1={artista.op1}
+          op2={artista.op2}
+          op3={artista.op3}
+          des={artista.des}
+          price={artista.price}
+          subprice={artista.subprice}
+        />
+      ))
+    }
+  </div>
+  <div class="ol">
+    <a href="#"
+      ><button
+        >Solicitar Espacio  <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-arrow-right"
+          ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+        ></button
+      ></a>
+  </div>
+</div>
+
+<style>
+  .come {
+    padding: 0rem 1rem;
+  }
+  .car {
+    margin: 2rem 0rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .ol {
+    text-align: center;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  button {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 25px;
+    border: 1px solid #ffffff55;
+    padding: 0.6rem 3rem;
+    margin: 3rem auto;
+    text-align: center;
+    text-align: center;
+    color: #12a34a;
+    background: #12a34a41;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center; text-decoration: none;
+  }
+</style>

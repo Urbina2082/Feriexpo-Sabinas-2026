@@ -1,0 +1,68 @@
+---
+const { im, nombre, fecha, genero } = Astro.props;
+---
+
+<div
+  style={`background-image:linear-gradient(to top, #000000dc, #00000000),url('${im}');`}
+  class="card">
+  
+  <div class="info">
+    <h4>{nombre}</h4>
+    <p>{fecha}</p>
+    <p>{genero}</p>
+
+    <div class="buts">
+      <button>Ver detalles</button>
+      <button>VIP</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    display: inline-block;
+
+    border-radius: 25px;
+    border: 1px solid #ffffff52;
+    overflow: hidden;
+    margin: 0rem 1rem;
+
+    width: 100%;
+    max-width: 22rem;
+    height: 36rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+  }
+
+  h4 {
+    margin: 0px;
+    font-size: clamp(1.6rem, 2vw, 4rem);
+  }
+
+  .info {
+    padding: 1rem 1rem;
+    color: #ffffffdb;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+  }
+
+ 
+  .buts {
+    display: flex;
+    gap: 1rem;
+  }
+  button {
+    border-radius: 25px;
+    border: 1px solid #ffffff5a;
+    padding: 1rem 2rem;
+
+    background: #ffffff0f;
+    backdrop-filter: blur(20px);
+    color: rgba(255, 255, 255, 0.753);
+    font-size: 0.9rem;
+  }
+</style>

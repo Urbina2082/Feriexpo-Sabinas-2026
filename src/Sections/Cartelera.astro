@@ -1,0 +1,49 @@
+---
+import Card from "../components/Cartelera/Card.astro";
+import InitSection from "../components/InitSection.astro";
+
+const Artistas = [
+  {
+    imagen: "/icon.jpg",
+    nombre: "Banda MS",
+    fecha: "17 Septiembre 2026",
+    genero: "Regional mexicano / Banda.",
+  },
+];
+---
+
+<div class="cartele" id="Cartelera">
+  <InitSection
+    sub="ARTISTAS"
+    title="Cartelera "
+    sp="Oficial"
+    pr="PROXIMAMENTE"
+  />
+
+  <!-- <div class="carte">
+    {
+      Artistas.map((artista) => (
+        <Card
+          im={artista.imagen}
+          nombre={artista.nombre}
+          fecha={artista.fecha}
+          genero={artista.genero}
+        />
+      ))
+    }
+  </div> -->
+</div>
+
+<style>
+  .cartele {
+    margin: 6rem 0rem;
+  }
+
+  .carte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+</style>

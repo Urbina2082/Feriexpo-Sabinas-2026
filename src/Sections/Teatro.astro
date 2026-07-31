@@ -1,0 +1,56 @@
+---
+import InitSection from "../components/InitSection.astro";
+import Card from "../components/Teatro/Card.astro";
+
+
+const Teatro = [
+  {
+    imagen: "/icon.jpg",
+    nombre: "Banda MS",
+    fecha: "17 Septiembre 2026",
+    hora: "8:00 PM",
+    des:"Los mejores comediantes del norte en una noche de siras sin parar."
+  },
+];
+---
+
+
+<div class="teatro">
+    <InitSection
+    sub=""
+    title="Teatro del "
+    sp="Pueblo"
+    pr="PROXIMAMENTE"
+  />
+
+    <!-- <div class="carte">
+    {
+      Teatro.map((artista) => (
+        <Card
+          im={artista.imagen}
+          nombre={artista.nombre}
+          fecha={artista.fecha}
+          hora={artista.hora}
+          des={artista.des}
+        />
+      ))
+    }
+  </div> -->
+</div>
+
+<style>
+
+.teatro{
+    margin: 7rem 0rem;
+}
+
+    .carte{
+        padding: 0rem 1rem;
+        margin: 2rem 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+</style>

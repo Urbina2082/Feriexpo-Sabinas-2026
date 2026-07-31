@@ -1,0 +1,42 @@
+---
+const { sv, tit, pr } = Astro.props;
+---
+
+<div class="card">
+  <div set:html={sv} class="sv" />
+  <div class="tit">{tit}</div>
+  <p>{pr}</p>
+</div>
+
+<style>
+
+
+  .card {
+    display: inline-block;
+   
+    padding: 2rem 2rem;
+    border-radius: 25px;
+    background: #ffffff06;
+    backdrop-filter: blur(50px);
+    color: rgba(255, 255, 255, 0.875);
+    border: 1px solid #ffffff1a;
+     max-width: 18rem;
+    width: 100%;
+  }
+
+  .sv{
+    color: var(--gold-600);
+  }
+
+  .tit{
+    font-size: 1.5rem;
+    font-weight: 600;
+   
+    margin: .5rem 0rem ;
+  
+  }
+
+  p{
+    color: #ffffff51;
+  }
+</style>

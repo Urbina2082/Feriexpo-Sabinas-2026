@@ -1,8 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../Sections/Hero.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../Sections/Hero.astro";
+import Reports from "../Sections/Reports.astro";
+import InfoGeneral from "../Sections/InfoGeneral.astro";
+import Cartelera from "../Sections/Cartelera.astro";
+import Teatro from "../Sections/Teatro.astro";
+import Comerciantes from "../Sections/Comerciantes.astro";
+import Footer from "../Sections/Footer.astro";
+import Sabinas  from "../Sections/Sabinas.astro"
 ---
 
 <Layout>
-<Hero/>
+  <Hero loading="lazy" />
+  <Reports loading="lazy" />
+  <InfoGeneral loading="lazy" />
+  <Cartelera loading="lazy" />
+  <Teatro loading="lazy" />
+  <Comerciantes loading="lazy"/>
+  <Sabinas loading="lazy"/>
+  <Footer loading="lazy"/>
+
 </Layout>

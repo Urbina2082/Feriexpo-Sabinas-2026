@@ -1,0 +1,86 @@
+---
+const { im, nombre, fecha, hora, des } = Astro.props;
+---
+
+<div class="card">
+  <div class="sv">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-users w-8 h-8 mx-auto mb-3 text-primary group-hover:text-secondary transition-colors"
+    >
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+      <circle cx="9" cy="7" r="4"></circle>
+      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+    </svg>
+  </div>
+  <div class="info">
+    <h4>{nombre}</h4>
+    <div class="fech">
+      <p>{fecha}</p>
+      <p>{hora}</p>
+    </div>
+    <p>{des}</p>
+
+    <button>GRATUITO</button>
+  </div>
+
+  <style>
+    .card {
+      display: inline-block;
+      border-radius: 25px;
+      border: 1px solid #ffffff52;
+      padding: 1rem 2rem;
+
+   
+      background: #0000000c;
+      backdrop-filter: blur(50px);
+      max-width: 27rem;
+    }
+
+    h4 {
+      margin: 0px;
+      font-size: clamp(1.6rem, 2vw, 4rem);
+    }
+    .sv {
+      display: inline-block;
+      color: #ffffff;
+
+      padding: 1rem;
+      background: #e39e0962;
+      border-radius: 12px;
+    }
+    .info {
+      padding: 1rem 0rem 0rem;
+      color: #ffffffdb;
+    }
+
+    .fech {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .fech p {
+      margin: 0px;
+      width: auto;
+    }
+    button {
+      border-radius: 25px;
+      border: 1px solid #ffffff5a;
+      padding: 0.7rem 2rem;
+      background: #12a34a35;
+      backdrop-filter: blur(20px);
+      color: var(--green-600);
+      font-size: 0.9rem;
+    }
+  </style>
+</div>
