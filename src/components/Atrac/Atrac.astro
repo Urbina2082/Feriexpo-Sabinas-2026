@@ -1,0 +1,73 @@
+---
+const { sv, tit, pr, pr2, pr3 } = Astro.props;
+---
+
+<div class="card">
+  <div class="sv">
+    {sv}
+  </div>
+  <div class="tit">{tit}</div>
+
+  <div class="con">
+    <div class="junt">
+      <div class="punt"></div>
+      <p>{pr}</p>
+    </div>
+
+    <div class="junt">
+      <div class="punt"></div>
+      <p>{pr2}</p>
+    </div>
+    <div class="junt">
+      <div class="punt"></div>
+      <p>{pr3}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card {
+    display: inline-block;
+    padding: 2rem 2rem;
+    border-radius: 25px;
+    background: #ffffff06;
+    backdrop-filter: blur(50px);
+    color: rgba(255, 255, 255, 0.875);
+    border: 1px solid #ffffff1a;
+    
+    max-width: 17rem;
+    width: 100%;
+    min-width: 12rem;
+  }
+
+  .sv {
+    font-size: 3rem;
+  }
+
+  .tit {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    margin: 0.5rem 0rem;
+  }
+
+  .con {
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  .junt {
+    color: #ffffff51;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .punt {
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 9999px;
+    background-color: #0eaa57;
+  }
+</style>

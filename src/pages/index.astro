@@ -8,16 +8,23 @@ import Teatro from "../Sections/Teatro.astro";
 import Comerciantes from "../Sections/Comerciantes.astro";
 import Footer from "../Sections/Footer.astro";
 import Sabinas  from "../Sections/Sabinas.astro"
+import Patrocinadores from "../Sections/Patrocinadores.astro";
+import AtracRoca from "../Sections/AtracRoca.astro";
+import Cabalgata from "../Sections/Cabalgata.astro";
 ---
 
 <Layout>
+  
   <Hero loading="lazy" />
   <Reports loading="lazy" />
   <InfoGeneral loading="lazy" />
+  <Cabalgata loading="lazy" />
   <Cartelera loading="lazy" />
   <Teatro loading="lazy" />
+  <AtracRoca loading="lazy"/>
   <Comerciantes loading="lazy"/>
   <Sabinas loading="lazy"/>
+  <Patrocinadores loading="lazy"/>
   <Footer loading="lazy"/>
 
 </Layout>

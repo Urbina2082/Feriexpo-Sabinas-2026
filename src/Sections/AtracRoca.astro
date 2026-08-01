@@ -1,0 +1,122 @@
+---
+import InitSection from "../components/InitSection.astro";
+import Atrac from "../components/Atrac/Atrac.astro";
+
+const general = [
+  {
+    sv: `🎢`,
+    tit: "Juegos Mecánicos",
+    pr: "Rueda de la Fortuna",
+    pr2: "Martillo",
+    pr3: "Montaña Rusa",
+  },
+  {
+    sv: `🎪`,
+    tit: "Shows Tradicionales",
+    pr: "Voladores de Papantla",
+    pr2: "Circo",
+    pr3: "Exposición ganadera",
+  },
+  {
+    sv: `🏛️`,
+    tit: "Pabellones",
+    pr: "Artesanías",
+    pr2: "Exposiciones",
+    pr3: "Ganadería",
+  },
+  {
+    sv: `🍽️`,
+    tit: "Área Gastronómica",
+    pr: "Antojitos",
+    pr2: "Aguas Frescas",
+    pr3: "Gorditas de nata",
+  }
+];
+---
+
+<div class="roca">
+  <InitSection
+    sub=""
+    title="Juegos y  "
+    sp="Atracciones"
+    pr="Más de 40 atracciones para toda la familia."
+  />
+
+  <div class="roca-section">
+    <div class="vid">
+      <video autoplay muted loop playsinline class="video-desktop">
+        <source src="/desktop.mp4" type="video/mp4" />
+      </video>
+      <video autoplay muted loop playsinline class="video-fondo video-mobile">
+        <source src="/mobil.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+
+  <div class="cards">
+    {
+      general.map((gen) => (
+        <Atrac
+          sv={gen.sv}
+          tit={gen.tit}
+          pr={gen.pr}
+          pr2={gen.pr2}
+          pr3={gen.pr3}
+        />
+      ))
+    }
+  </div>
+</div>
+<div></div>
+<style>
+  .roca-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    margin: 4rem 0rem;
+  }
+
+  .roca {
+    margin: 7rem 0rem;
+  }
+
+  .vid {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+  }
+  .gene {
+    margin: 6rem 0rem;
+    padding: 0rem 0.5rem;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 768px) {
+    .cards {
+      gap: 1rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .video-desktop {
+      display: none;
+    }
+
+    .video-mobile {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+  }
+</style>
