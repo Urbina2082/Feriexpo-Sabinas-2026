@@ -10,39 +10,49 @@ const { sv, num, p } = Astro.props;
 
 <style>
   .report {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 1rem 2rem;
     border-radius: 25px;
-     background: #ffffff06;
+    background: #ffffff06;
     backdrop-filter: blur(50px);
     color: rgba(255, 255, 255, 0.646);
     border: 1px solid #ffffff1a;
     font-weight: 700;
-    max-width: 14rem;
-    width: 100%;
-    
+    min-width: 120px;
+    max-width: 300px;
   }
 
   .num {
-    font-size: 3rem;
+    display: inline-block;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
     font-weight: 600;
     background-image: var(--gradient-title);
     -webkit-background-clip: text;
     background-clip: text;
-    margin: .5rem 0rem ;
+    margin: 0.5rem 0rem;
     -webkit-text-fill-color: transparent;
   }
 
-  .im{
-
+  .im {
+    display: inline-block;
     color: var(--green-600);
   }
 
-   @media (max-width: 768px) {
+  p {
+    display: inline-block;
+  }
+  @media (max-width: 768px) {
+    .report {
+      font-weight: 400;
 
-      .report{
-        width: 100%;
-      }
+      padding: 1rem;
+    }
+    .num {
+      font-weight: 600;
+    }
   }
 </style>

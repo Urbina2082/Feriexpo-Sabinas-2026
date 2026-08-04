@@ -1,0 +1,61 @@
+---
+const { sv, fech, tit, pr } = Astro.props;
+---
+
+<div class="card">
+  <div class="sv">
+    {sv}
+  </div>
+  <div class="tit">{tit}</div>
+  <span class="fech">{fech}</span>
+
+  <div class="con">
+    <p>{pr}</p>
+  </div>
+
+  <style>
+    .card {
+      display: inline-block;
+      padding: 2rem 2rem;
+      border-radius: 25px;
+      background: #ffb80505;
+      backdrop-filter: blur(50px);
+      color: rgba(255, 255, 255, 0.875);
+      border: 1px solid #ffffff42;
+      max-width: 17rem;
+      width: 100%;
+      min-width: 12rem;
+      text-align: left;
+    }
+
+    .sv {
+      font-size: 3rem;
+    }
+
+    .fech {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #ffb805;
+    }
+
+    .tit {
+      font-size: 1.5rem;
+      font-weight: 600;
+
+      margin: 0.5rem 0rem;
+    }
+
+    .con {
+      display: flex;
+      flex-direction: column;
+    }
+
+    p {
+      font-size: 1rem;
+       font-weight: 300;
+      line-height: 1.5rem;
+      color: rgba(255, 255, 255, 0.717);
+      margin: 0.5rem 0rem;
+    }
+  </style>
+</div>
