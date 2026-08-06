@@ -4,29 +4,51 @@ const { im, nombre, fecha, hora, des } = Astro.props;
 
 <div class="card">
   <div class="sv">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="lucide lucide-users w-8 h-8 mx-auto mb-3 text-primary group-hover:text-secondary transition-colors"
-    >
-      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-      <circle cx="9" cy="7" r="4"></circle>
-      <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
-      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-    </svg>
+    <img src={im} alt={nombre} />
   </div>
   <div class="info">
     <h4>{nombre}</h4>
     <div class="fech">
-      <p>{fecha}</p>
-      <p>{hora}</p>
+      <p>
+        <svg
+          class="calendar"
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-calendar text-secondary"
+          ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect
+            width="18"
+            height="18"
+            x="3"
+            y="4"
+            rx="2"></rect><path d="M3 10h18"></path></svg
+        >
+        {fecha}
+      </p>
+      <p>
+        <svg
+          class="clock"
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-clock text-primary"
+          ><circle cx="12" cy="12" r="10"></circle><polyline
+            points="12 6 12 12 16 14"></polyline></svg
+        >
+        {hora}
+      </p>
     </div>
     <p>{des}</p>
 
@@ -38,14 +60,17 @@ const { im, nombre, fecha, hora, des } = Astro.props;
       display: inline-block;
       border-radius: 25px;
       border: 1px solid #ffffff52;
-      padding: 1rem 2rem;
+      padding: 2rem 1.5rem;
 
-   
       background: #0000000c;
       backdrop-filter: blur(50px);
       max-width: 27rem;
     }
 
+    .card img {
+      width: 120px;
+      border-radius: 0px;
+    }
     h4 {
       margin: 0px;
       font-size: clamp(1.6rem, 2vw, 4rem);
@@ -54,8 +79,8 @@ const { im, nombre, fecha, hora, des } = Astro.props;
       display: inline-block;
       color: #ffffff;
 
-      padding: 1rem;
-      background: #e39e0962;
+      padding: 1rem 0rem 0rem›;
+     
       border-radius: 12px;
     }
     .info {
@@ -64,14 +89,28 @@ const { im, nombre, fecha, hora, des } = Astro.props;
     }
 
     .fech {
+      margin: 0.5rem 0rem;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #ffffff9f;
       display: flex;
       align-items: center;
       gap: 1rem;
     }
 
+    .calendar {
+      color: var(--gold-600);
+    }
+    .clock {
+      color: var(--green-600);
+    }
+
     .fech p {
       margin: 0px;
-      width: auto;
+
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
     }
     button {
       border-radius: 25px;

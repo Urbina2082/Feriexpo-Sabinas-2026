@@ -1,14 +1,43 @@
-:root {
-  /* Verdes */
+/* :root {
  
-  --green-600: #12A34A;
-  
 
-  /* Dorados */
-  --gold-600: #E39F09;
-  
+  --green-600: #282ceb;
 
-  /* Gradientes */
+ 
+  --gold-600: #00c8ff;
+  --gold-600-transparent: #00c8ff49;
+
+ 
+  --fondo-after: #00000049;
+
+ 
+  --gradient:
+    radial-gradient(circle at 20% 40%, rgba(0, 200, 255, 0.3), transparent 35%),
+    radial-gradient(
+      circle at 80% 58%,
+      rgba(175, 38, 255, 0.363),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #070f2b 0%, #0d1b4c 100%);
+
+  --gradient-title: linear-gradient(
+    90deg,
+    #00c8ff 0%,
+    #2a2ceb 30%,
+    #6a1b9a 60%,
+    #b026ff 80%,
+    #ff2ecf 100%
+  );
+} */
+
+:root {
+  --green-600: #12a34a;
+
+  --gold-600: #e39f09;
+
+  --fondo-after: #ffb80520;
+  --gold-600-transparent: #ffb80516;
+
   --gradient:
     radial-gradient(
       circle at 20% 40%,
@@ -22,12 +51,12 @@
     ),
     linear-gradient(180deg, #07110a 0%, #0b170e 100%);
 
-     --gradient-title: linear-gradient(
+  --gradient-title: linear-gradient(
     90deg,
-    #12A34A 0%,
-    #36B93E 35%,
-    #8DC63F 60%,
-    #E1B11A 85%,
-    #E39F09 100%
+    #12a34a 0%,
+    #36b93e 35%,
+    #8dc63f 60%,
+    #e1b11a 85%,
+    #e39f09 100%
   );
 }

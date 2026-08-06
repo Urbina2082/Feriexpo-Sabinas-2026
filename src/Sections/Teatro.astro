@@ -2,28 +2,83 @@
 import InitSection from "../components/InitSection.astro";
 import Card from "../components/Teatro/Card.astro";
 
-
 const Teatro = [
   {
-    imagen: "/icon.jpg",
-    nombre: "Banda MS",
+    imagen: "/Teatro/1.avif",
+    nombre: "Ismael Cituk Jr.",
+    fecha: "11 Septiembre 2026",
+    hora: "9:00 PM",
+    des: "El cantante Ismael Cituk Jr. inaugura la cartelera del Teatro del Pueblo con un espectáculo lleno de música y talento regional.",
+  },
+  { 
+
+    imagen: "/Teatro/2.avif",
+    nombre: "Banda Kañon",
+    fecha: "13 Septiembre 2026",
+    hora: "9:00 PM",
+    des: "Banda Kañon llega con sus grandes éxitos para poner a bailar al público con lo mejor de la música regional mexicana.",
+  },
+  {
+   imagen: "/Teatro/3.avif",
+    nombre: "KPOP Demon Hunters",
+    fecha: "14 Septiembre 2026",
+    hora: "9:00 PM",
+    des: "Espectáculo familiar inspirado en el mundo del K-Pop con música, baile, luces y personajes para todas las edades.",
+  },
+  {
+   imagen: "/Teatro/4.avif",
+    nombre: "La Rondalla",
+    fecha: "16 Septiembre 2026",
+    hora: "9:00 PM",
+    des: "Una velada romántica con La Rondalla, interpretando los clásicos que han marcado generaciones.",
+  },
+  {
+    imagen: "/Teatro/5.avif",
+    nombre: "El Gordo y El Otro",
     fecha: "17 Septiembre 2026",
-    hora: "8:00 PM",
-    des:"Los mejores comediantes del norte en una noche de siras sin parar."
+    hora: "9:00 PM",
+    des: "El exitoso dúo de comedia norteña presenta un espectáculo lleno de humor, ocurrencias y diversión para toda la familia.",
+  },
+  {
+    imagen: "/Teatro/6.avif",
+    nombre: "Toy Story Show",
+    fecha: "18 Septiembre 2026",
+    hora: "9:00 PM",
+    des: "Show infantil con los personajes inspirados en Toy Story, ideal para disfrutar en familia con música y diversión.",
+  },
+  {
+    imagen: "/Teatro/7.avif",
+    nombre: "Gary Show",
+    fecha: "19 Septiembre 2026",
+    hora: "9:00 PM",
+    des: "Gary Show ofrece una noche de entretenimiento, música y un ambiente lleno de energía para todos los asistentes.",
+  },
+  {
+    imagen: "/Teatro/8.avif",
+    nombre: "Kika Edgar",
+    fecha: "20 Septiembre 2026",
+    hora: "9:00 PM",
+    des: "Gran cierre del Teatro del Pueblo con Kika Edgar acompañada por La Única Internacional Sonora Santanera, interpretando los éxitos que han hecho historia.",
+  },
+   {
+    imagen: "/Teatro/9.avif",
+    nombre: "La Única Internacional Sonora Santanera",
+    fecha: "20 Septiembre 2026",
+    hora: "9:00 PM",
+    des: "Gran cierre del Teatro del Pueblo con Kika Edgar acompañada por La Única Internacional Sonora Santanera, interpretando los éxitos que han hecho historia.",
   },
 ];
 ---
 
-
 <div class="teatro">
-    <InitSection
+  <InitSection
     sub=""
     title="Teatro del "
     sp="Pueblo"
-    pr="PROXIMAMENTE"
+    pr="Cultura, risas y arte en el corazón de la feria."
   />
 
-    <!-- <div class="carte">
+  <div class="carte">
     {
       Teatro.map((artista) => (
         <Card
@@ -35,22 +90,21 @@ const Teatro = [
         />
       ))
     }
-  </div> -->
+  </div>
 </div>
 
 <style>
-
-.teatro{
+  .teatro {
     margin: 7rem 0rem;
-}
+  }
 
-    .carte{
-        padding: 0rem 1rem;
-        margin: 2rem 0rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
+  .carte {
+    padding: 0rem 1rem;
+    margin: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
 </style>

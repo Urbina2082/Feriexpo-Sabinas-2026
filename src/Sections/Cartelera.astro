@@ -4,10 +4,70 @@ import InitSection from "../components/InitSection.astro";
 
 const Artistas = [
   {
-    imagen: "/icon.jpg",
-    nombre: "Banda MS",
+    imagen: "/Cartelera/barron.avif",
+    nombre: "Los Hermanos Barron",
+    fecha: "11 Septiembre 2026",
+    genero: "Norteño / Rancheras",
+  },
+  {
+    imagen: "/Cartelera/tierra.avif",
+    nombre: "Banda Tierra Sagrada",
+    fecha: "12 Septiembre 2026",
+    genero: "Banda sinaloense / Regional mexicano",
+  },
+  {
+    imagen: "/Cartelera/mazter.avif",
+    nombre: "Sonido Mazter",
+    fecha: "13 Septiembre 2026",
+    genero: "Cumbia / Música tropical",
+  },
+  {
+    imagen: "/Cartelera/invasores.avif",
+    nombre: "Los Invasores de Nuevo León",
+    fecha: "14 Septiembre 2026",
+    genero: "Norteño / Corridos / Rancheras",
+  },
+  {
+    imagen: "/Cartelera/chivo.avif",
+    nombre: "Mister Chivo",
+    fecha: "15 Septiembre 2026",
+    genero: "Tropical / Cumbia / Grupero",
+  },
+  {
+    imagen: "/Cartelera/leandro.avif",
+    nombre: "Leandro Rios",
+    fecha: "16 Septiembre 2026",
+    genero: "Norteño / Corridos / Regional mexicano",
+  },
+  {
+    imagen: "/Cartelera/marca.avif",
+    nombre: "Grupo Marca Registrada",
     fecha: "17 Septiembre 2026",
-    genero: "Regional mexicano / Banda.",
+    genero: "Regional mexicano / Norteño / Corridos",
+  },
+  {
+    imagen: "/Cartelera/firma.avif",
+    nombre: "La Firma",
+    fecha: "17 Septiembre 2026",
+    genero: "Grupero / Norteño / Tex-Mex",
+  },
+  {
+    imagen: "/Cartelera/maria.avif",
+    nombre: "Maria Jose",
+    fecha: "18 Septiembre 2026",
+    genero: "Pop latino / Dance-pop",
+  },
+  {
+    imagen: "/Cartelera/casetera.avif",
+    nombre: "La Casetera",
+    fecha: "19 Septiembre 2026",
+    genero: "Pop en español / Dance / Retro",
+  },
+  {
+    imagen: "/Cartelera/estrella.avif",
+    nombre: "La Tropa Estrella",
+    fecha: "20 Septiembre 2026",
+    genero: "Cumbia / Tropical / Grupero",
   },
 ];
 ---
@@ -17,10 +77,10 @@ const Artistas = [
     sub="ARTISTAS"
     title="Cartelera "
     sp="Oficial"
-    pr="PROXIMAMENTE"
+    pr="Los mejores artistas del momento en un solo escenario."
   />
 
-  <!-- <div class="carte">
+  <div class="carte">
     {
       Artistas.map((artista) => (
         <Card
@@ -31,7 +91,7 @@ const Artistas = [
         />
       ))
     }
-  </div> -->
+  </div>
 </div>
 
 <style>
@@ -43,7 +103,13 @@ const Artistas = [
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
     flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    .carte {
+      gap: 5rem;
+    }
   }
 </style>
