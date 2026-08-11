@@ -1,16 +1,16 @@
 ---
 import { Image } from "astro:assets";
-import Icon from "../assets/icon.avif";
+import Icon from "../assets/iconTransp.avif";
 import Timer from "../components/Timer.astro";
 ---
 
 <div class="hero">
   <div class="menu">
-    <h2>Feriexpo Sabinas 2026</h2>
+    <!-- <h2>Feriexpo Sabinas 2026</h2> -->
   </div>
   <div class="content">
     <Image class="imh" src={Icon} alt="Icono" />
-    <h1>FeriExpo <span>Sabinas 2026</span></h1>
+    <!-- <h1>FeriExpo <span>Sabinas 2026</span></h1> -->
     <p>
       La fiesta más grande del norte de Mexico te espera. Diversión, música y
       tradición en un solo lugar.
@@ -49,13 +49,13 @@ import Timer from "../components/Timer.astro";
     width: 100%;
     height: 100vh;
     background-image:
-      linear-gradient(to top, #00000086, #0000007a), url(/hero.avif);
+      linear-gradient(to top, #000000c0, #0000009f), url(/her-bg.avif);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
   }
-  .menu {
+  /* .menu {
     background: #ffffff08;
 
     white-space: nowrap;
@@ -69,15 +69,15 @@ import Timer from "../components/Timer.astro";
     backdrop-filter: blur(7px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 25px;
-  }
+  } */
   .content {
-    padding: 6rem 01rem 0rem;
+    padding: 2rem 01rem 0rem;
   }
   .imh {
-    width: 130px;
+    width: 380px;
     border-radius: 25px;
     height: auto;
-    margin: 1rem 0rem;
+    margin: 3rem 0rem 0rem;
      /* padding: 1.3rem 1.5rem;
     backdrop-filter: blur(7px);
     border: 1px solid rgba(255, 255, 255, 0.1); */
@@ -85,11 +85,12 @@ import Timer from "../components/Timer.astro";
   h2 {
     font-size: clamp(1.2rem, 1.5vw, 1.9rem);
     margin: 0px 0px;
-    background-image: var(--gradient-title);
+    color: var(--green-600);
+    /* background-image: var(--gradient-title);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
   }
   h1 {
     font-size: clamp(2.9rem, 4.5vw, 5rem);
@@ -97,11 +98,12 @@ import Timer from "../components/Timer.astro";
     margin: 0px;
   }
   span {
-    background-image: var(--gradient-title);
+    color: var(--green-700) ;
+    /* background-image: var(--gradient-title);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     font-weight: 700;
   }
   p {
@@ -130,7 +132,12 @@ import Timer from "../components/Timer.astro";
 
   @media (max-width: 768px) {
     .imh {
-      width: 100px;
+      width: 220px;
+    }
+
+    .hero{
+          background-image:
+      linear-gradient(to top, #000000c0, #0000009f), url(/hero-tel.avif);
     }
   }
 </style>

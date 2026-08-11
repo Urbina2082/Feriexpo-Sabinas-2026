@@ -1,36 +1,36 @@
-/* :root {
- 
-
+:root {
   --green-600: #282ceb;
-
- 
+  --green-700: #12a34a;
   --gold-600: #00c8ff;
   --gold-600-transparent: #00c8ff49;
-
- 
+  --gold-700: #e39f09;
+  --gold-700transparent: #ffffff20;
+  --gold-700-transparent: #e39f0949;
   --fondo-after: #00000049;
 
- 
   --gradient:
-    radial-gradient(circle at 20% 40%, rgba(0, 200, 255, 0.3), transparent 35%),
     radial-gradient(
-      circle at 80% 58%,
-      rgba(175, 38, 255, 0.363),
-      transparent 30%
+      circle at 20% 35%,
+      rgba(4, 50, 255, 0.18),
+      transparent 35%
     ),
-    linear-gradient(180deg, #070f2b 0%, #0d1b4c 100%);
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(4, 33, 255, 0.158),
+      transparent 35%
+    ),
+    radial-gradient(circle at 70% 55%, rgba(146, 4, 255, 0.096), transparent 35%),
+    radial-gradient(circle at 30% 90%, #9e1bf02f, transparent 30%),
+    linear-gradient(180deg, #000000bb 0%, #000000bb 100%);
 
-  --gradient-title: linear-gradient(
-    90deg,
-    #00c8ff 0%,
-    #2a2ceb 30%,
-    #6a1b9a 60%,
-    #b026ff 80%,
-    #ff2ecf 100%
-  );
-} */
+  --gradient-title: rgb(255, 255, 255);
+  --amarillo: rgb(240, 157, 27);
+  --azul: rgb(04, 157, 255);
+  --rojo: rgb(240, 32, 48);
+  --verde: rgb(59, 169, 112);
+}
 
-:root {
+/* :root {
   --green-600: #12a34a;
 
   --gold-600: #e39f09;
@@ -59,4 +59,4 @@
     #e1b11a 85%,
     #e39f09 100%
   );
-}
+} */
