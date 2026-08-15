@@ -1,0 +1,272 @@
+---
+const { artista } = Astro.props;
+---
+
+<div
+  class="banner"
+  style={`--imagen-desktop: url('${artista.im}'); --imagen-mobile: url('${artista.imMobile}');`}
+>
+  <div class="info">
+    <span
+      ><svg
+        class="gen"
+        xmlns="http://www.w3.org/2000/svg"
+        width="17"
+        height="17"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        data-astro-cid-eesvpkgy=""
+        ><path d="M9 18V5l12-2v13" data-astro-cid-eesvpkgy=""></path><circle
+          cx="6"
+          cy="18"
+          r="3"
+          data-astro-cid-eesvpkgy=""></circle><circle
+          cx="18"
+          cy="16"
+          r="3"
+          data-astro-cid-eesvpkgy=""></circle></svg
+      >
+      {artista.genero}</span
+    >
+    <h2>{artista.nombre}</h2>
+    <!-- <div class="pre-inf">
+      <p>
+        <svg
+          class="date"
+          xmlns="http://www.w3.org/2000/svg"
+          width="17"
+          height="17"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#ee850c"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          data-astro-cid-eesvpkgy=""
+          ><path d="M8 2v4" data-astro-cid-eesvpkgy=""></path><path
+            d="M16 2v4"
+            data-astro-cid-eesvpkgy=""></path><rect
+            width="18"
+            height="18"
+            x="3"
+            y="4"
+            rx="2"
+            data-astro-cid-eesvpkgy=""></rect><path
+            d="M3 10h18"
+            data-astro-cid-eesvpkgy=""></path></svg
+        >
+        {artista.fecha}
+      </p>
+      <p>
+        <svg
+          class="clock"
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#ee850c"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          data-astro-cid-mxxh4sk3=""
+          ><circle cx="12" cy="12" r="10" data-astro-cid-mxxh4sk3=""
+          ></circle><polyline
+            points="12 6 12 12 16 14"
+            data-astro-cid-mxxh4sk3=""></polyline></svg
+        >
+        {artista.hora}
+      </p>
+      <p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="19"
+          height="19"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#ee850c"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-map-pin w-8 h-8 text-secondary mb-3 group-hover:scale-110 transition-transform"
+          ><path
+            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+          ></path><circle cx="12" cy="10" r="3"></circle></svg
+        >
+        {artista.lugar}
+      </p>
+    </div> -->
+    <div class="buts">
+      <a href="#Boletos">
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="19"
+            height="19"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-ticket"
+            data-astro-cid-eesvpkgy=""
+            ><path
+              d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"
+              data-astro-cid-eesvpkgy=""></path><path
+              d="M13 5v2"
+              data-astro-cid-eesvpkgy=""></path><path
+              d="M13 17v2"
+              data-astro-cid-eesvpkgy=""></path><path
+              d="M13 11v2"
+              data-astro-cid-eesvpkgy=""></path></svg
+          >Comprar boletos</button
+        ></a
+      >
+      <a href="" id="whatsapp">
+        <button class="comp">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="19"
+            height="19"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-share"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M3 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+            <path d="M15 6a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+            <path d="M15 18a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+            <path d="M8.7 10.7l6.6 -3.4"></path>
+            <path d="M8.7 13.3l6.6 3.4"></path>
+          </svg> Compartir</button
+        ></a
+      >
+    </div>
+  </div>
+</div>
+
+<script>
+  const boton = document.querySelector("#whatsapp");
+
+  boton?.addEventListener("click", () => {
+    const url = encodeURIComponent(window.location.href);
+    const texto = encodeURIComponent("Mira este artista:");
+
+    window.open(`https://wa.me/?text=${texto}%20${url}`, "_blank");
+  });a
+</script>
+
+<style>
+  .banner {
+    width: 100%;
+    height: 90vh;
+    background-image:
+      linear-gradient(to top, #000000, #00000000), var(--imagen-desktop);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .info {
+    padding-left: 4rem;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 2rem;
+  }
+  span {
+    background: #ee850c;
+    color: #000000;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    display: inline-flex;
+    gap: 0.3rem;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: clamp(2.5rem, 4vw, 6rem);
+    margin: 15px 0px;
+    font-weight: 900;
+  }
+
+  .pre-inf {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 0px 0px 15px;
+  }
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .buts {
+    display: flex;
+
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  button {
+    background: #ee850c;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  .comp {
+    background: rgba(0, 0, 0, 0.11);
+    color: rgb(254, 254, 255);
+    border: solid 1px #ffffff17;
+  }
+
+  @media (max-width: 768px) {
+    .banner {
+      background-image:
+        linear-gradient(to top, #000000, #00000000), var(--imagen-mobile);
+    }
+
+    h2 {
+      margin: 15px 0px;
+      font-weight: 900;
+    }
+
+    .pre-inf {
+      display: flex;
+
+      gap: 0.5rem;
+      margin: 0px 0px 15px;
+    }
+    p {
+      margin: 5px 0px;
+      gap: 0.3rem;
+    }
+
+    .info {
+      padding: 0rem 1.5rem;
+    }
+  }
+</style>

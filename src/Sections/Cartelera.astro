@@ -1,76 +1,77 @@
 ---
 import Card from "../components/Cartelera/Card.astro";
 import InitSection from "../components/InitSection.astro";
+import { artistas } from "../Data/Artistas";
 
-const Artistas = [
-  {
-    imagen: "/Cartelera/barron.avif",
-    nombre: "Los Hermanos Barron",
-    fecha: "11 Septiembre 2026",
-    genero: "Norteño / Rancheras",
-  },
-  {
-    imagen: "/Cartelera/tierra.avif",
-    nombre: "Banda Tierra Sagrada",
-    fecha: "12 Septiembre 2026",
-    genero: "Banda sinaloense / Regional mexicano",
-  },
-  {
-    imagen: "/Cartelera/mazter.avif",
-    nombre: "Sonido Mazter",
-    fecha: "13 Septiembre 2026",
-    genero: "Cumbia / Música tropical",
-  },
-  {
-    imagen: "/Cartelera/invasores.avif",
-    nombre: "Los Invasores de Nuevo León",
-    fecha: "14 Septiembre 2026",
-    genero: "Norteño / Corridos / Rancheras",
-  },
-  {
-    imagen: "/Cartelera/chivo.avif",
-    nombre: "Mister Chivo",
-    fecha: "15 Septiembre 2026",
-    genero: "Tropical / Cumbia / Grupero",
-  },
-  {
-    imagen: "/Cartelera/marca.avif",
-    nombre: "Grupo Marca Registrada",
-    fecha: "16 Septiembre 2026",
-    genero: "Regional mexicano / Norteño / Corridos",
-  },
-  {
-    imagen: "/Cartelera/firma.avif",
-    nombre: "La Firma",
-    fecha: "16 Septiembre 2026",
-    genero: "Grupero / Norteño / Tex-Mex",
-  },
-  {
-    imagen: "/Cartelera/leandro.avif",
-    nombre: "Leandro Rios",
-    fecha: "17 Septiembre 2026",
-    genero: "Norteño / Corridos / Regional mexicano",
-  },
+// const Asrtistass = [
+//   {
+//     imagen: "/Cartelera/barron.avif",
+//     nombre: "Los Hermanos Barron",
+//     fecha: "11 Septiembre 2026",
+//     genero: "Norteño / Rancheras",
+//   },
+//   {
+//     imagen: "/Cartelera/tierra.avif",
+//     nombre: "Banda Tierra Sagrada",
+//     fecha: "12 Septiembre 2026",
+//     genero: "Banda sinaloense / Regional mexicano",
+//   },
+//   {
+//     imagen: "/Cartelera/mazter.avif",
+//     nombre: "Sonido Mazter",
+//     fecha: "13 Septiembre 2026",
+//     genero: "Cumbia / Música tropical",
+//   },
+//   {
+//     imagen: "/Cartelera/invasores.avif",
+//     nombre: "Los Invasores de Nuevo León",
+//     fecha: "14 Septiembre 2026",
+//     genero: "Norteño / Corridos / Rancheras",
+//   },
+//   {
+//     imagen: "/Cartelera/chivo.avif",
+//     nombre: "Mister Chivo",
+//     fecha: "15 Septiembre 2026",
+//     genero: "Tropical / Cumbia / Grupero",
+//   },
+//   {
+//     imagen: "/Cartelera/marca.avif",
+//     nombre: "Grupo Marca Registrada",
+//     fecha: "16 Septiembre 2026",
+//     genero: "Regional mexicano / Norteño / Corridos",
+//   },
+//   {
+//     imagen: "/Cartelera/firma.avif",
+//     nombre: "La Firma",
+//     fecha: "16 Septiembre 2026",
+//     genero: "Grupero / Norteño / Tex-Mex",
+//   },
+//   {
+//     imagen: "/Cartelera/leandro.avif",
+//     nombre: "Leandro Rios",
+//     fecha: "17 Septiembre 2026",
+//     genero: "Norteño / Corridos / Regional mexicano",
+//   },
 
-  {
-    imagen: "/Cartelera/maria.avif",
-    nombre: "Maria Jose",
-    fecha: "18 Septiembre 2026",
-    genero: "Pop latino / Dance-pop",
-  },
-  {
-    imagen: "/Cartelera/casetera.avif",
-    nombre: "La Casetera",
-    fecha: "19 Septiembre 2026",
-    genero: "Pop en español / Dance / Retro",
-  },
-  {
-    imagen: "/Cartelera/estrella.avif",
-    nombre: "La Tropa Estrella",
-    fecha: "20 Septiembre 2026",
-    genero: "Cumbia / Tropical / Grupero",
-  },
-];
+//   {
+//     imagen: "/Cartelera/maria.avif",
+//     nombre: "Maria Jose",
+//     fecha: "18 Septiembre 2026",
+//     genero: "Pop latino / Dance-pop",
+//   },
+//   {
+//     imagen: "/Cartelera/casetera.avif",
+//     nombre: "La Casetera",
+//     fecha: "19 Septiembre 2026",
+//     genero: "Pop en español / Dance / Retro",
+//   },
+//   {
+//     imagen: "/Cartelera/estrella.avif",
+//     nombre: "La Tropa Estrella",
+//     fecha: "20 Septiembre 2026",
+//     genero: "Cumbia / Tropical / Grupero",
+//   },
+// ];
 ---
 
 <div class="cartele" id="Cartelera">
@@ -83,12 +84,13 @@ const Artistas = [
 
   <div class="carte">
     {
-      Artistas.map((artista) => (
+      artistas.map((artista) => (
         <Card
           im={artista.imagen}
           nombre={artista.nombre}
           fecha={artista.fecha}
           genero={artista.genero}
+          slug={artista.slug}
         />
       ))
     }
@@ -104,7 +106,7 @@ const Artistas = [
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
     flex-wrap: wrap;
   }
 

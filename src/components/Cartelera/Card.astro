@@ -1,5 +1,5 @@
 ---
-const { im, nombre, fecha, genero } = Astro.props;
+const { im, nombre, fecha, genero, slug } = Astro.props;
 ---
 
 <div
@@ -51,23 +51,26 @@ const { im, nombre, fecha, genero } = Astro.props;
 
     <div class="buts">
       <!-- <button class="buto">Ver Detalles</button> -->
-      <button>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-ticket"
-          ><path
-            d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"
-          ></path><path d="M13 5v2"></path><path d="M13 17v2"></path><path
-            d="M13 11v2"></path></svg
-        > Ver Detalles</button
+
+      <a href=`/Artistas/${slug}`
+        ><button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-ticket"
+            ><path
+              d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"
+            ></path><path d="M13 5v2"></path><path d="M13 17v2"></path><path
+              d="M13 11v2"></path></svg
+          > Ver Detalles</button
+        ></a
       >
     </div>
   </div>
@@ -78,25 +81,23 @@ const { im, nombre, fecha, genero } = Astro.props;
     display: inline-block;
     box-shadow: 0px 00px 20px 5px #00000010;
     border-radius: 25px;
-    border: 1px solid #0000004d;
+    border: 0px solid #0000004d;
     overflow: hidden;
-    margin: 0rem 1rem;
+    margin: 0rem .5rem;
     width: 100%;
-    max-width: 20rem;
+    max-width: 23rem;
     height: 34rem;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     object-position: top center;
-   
   }
 
   h4 {
     margin: 0px;
     font-size: clamp(1.7rem, 2vw, 4rem);
     font-weight: 900;
-    
   }
 
   .info {
@@ -105,7 +106,7 @@ const { im, nombre, fecha, genero } = Astro.props;
     position: absolute;
     width: 100%;
     bottom: 0px;
-    box-sizing:border-box;
+    box-sizing: border-box;
   }
 
   .buts {
@@ -115,10 +116,11 @@ const { im, nombre, fecha, genero } = Astro.props;
 
   button {
     border-radius: 25px;
-    border: 1px solid #d9b00e00;
+    border: 1px solid #ffffff2c;
     padding: 0.6rem 2rem;
-    margin:.5rem 0rem ;
-    background: var(--green-700);
+    margin: 0.5rem 0rem;
+    /* background: var(--green-700); */
+    background: #00000000;
     backdrop-filter: blur(0px);
     color: #ffffff;
     font-size: 0.9rem;
@@ -139,15 +141,21 @@ const { im, nombre, fecha, genero } = Astro.props;
     align-items: center;
     gap: 0.5rem;
   }
-  .date {
+  /* .date {
     color: #0eaa57f6;
   }
   .gen {
-    color: #ffb805;
-  }
+    color: #ee850c;
+  } */
+   
   .genre {
     font-size: 0.9rem;
     color: #ffffffa1;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
   }
   @media (max-width: 768px) {
     .card {

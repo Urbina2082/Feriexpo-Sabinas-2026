@@ -1,0 +1,248 @@
+---
+const { artista } = Astro.props;
+---
+
+<div class="demo">
+  <div class="canciones">
+    <h4>Canciones Mas Populares</h4>
+    <div class="can">
+      <a href={artista.can1noml}><span>01</span>{artista.can1nom}</a>
+      <a href={artista.can2noml}><span>02</span>{artista.can2nom}</a>
+      <a href={artista.can3noml}><span>03</span>{artista.can3nom}</a>
+      <a href={artista.can4noml}><span>04</span>{artista.can4nom}</a>
+      <a href={artista.can5noml}><span>05</span>{artista.can5nom}</a>
+    </div>
+  </div>
+  <div class="galy">
+    <h4>Galleria</h4>
+    <div class="gall">
+      <div class="bloq">
+        <img src="/Artistas/Barron-im-mov.avif" alt="" />
+      </div>
+      <div class="bloq">
+        <img src="/Artistas/Barron-im-mov.avif" alt="" />
+      </div>
+      <div class="bloq">
+        <img src="/Artistas/Barron-im-mov.avif" alt="" />
+      </div>
+      <div class="bloq">
+        <img src="/Artistas/Barron-im-mov.avif" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="boletos" id="Boletos">
+    <h4>Boletos disponibles para esta presentacion</h4>
+
+    {
+      artista.vip ? (
+        <div class="vip">
+          <a href={artista.linkVip}>
+            <button>
+              Boletos VIP
+              <span>
+                Comprar
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-narrow-right"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M5 12l14 0" />
+                  <path d="M15 16l4 -4" />
+                  <path d="M15 8l4 4" />
+                </svg>
+              </span>
+            </button>
+          </a>
+        </div>
+      ) : (
+        <div class="gen">
+          <span class="genu">Acceso general únicamente</span>
+        </div>
+      )
+    }
+
+    <div class="card">
+      <div class="sv">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="34"
+          height="34"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-dollar-sign w-8 h-8 text-secondary mb-3 group-hover:scale-110 transition-transform"
+          ><line x1="12" x2="12" y1="2" y2="22"></line><path
+            d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg
+        >
+      </div>
+      <div class="tit">Entrada General</div>
+      <p>Adultos: $60 MXN y Niños: $20MXN</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .demo {
+    padding: 0rem 4rem;
+    margin: 4rem 0rem;
+  }
+  h4 {
+    color: var(--green-700);
+    font-weight: 400;
+    margin: 0rem;
+    font-size: 2rem;
+  }
+
+  a {
+    display: inline-flex;
+    gap: 1rem;
+    padding: 0.6rem 2rem;
+    background: #ffffff06;
+    backdrop-filter: blur(50px);
+    border: 1px solid #ffffff1a;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 1.4rem;
+  }
+  span {
+    color: var(--green-700);
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .can {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 2rem 0rem;
+  }
+
+  .gall {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(10rem, 30rem));
+    gap: 1rem;
+  }
+  .bloq {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .bloq img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+
+  .galy {
+    margin: 5rem 0rem;
+    h4 {
+      margin: 1rem 0rem;
+    }
+  }
+
+  .boletos a {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0px;
+    background: #ffffff00;
+    backdrop-filter: blur(50px);
+    border: 0px solid #ffffff1a;
+    text-decoration: none;
+    margin: 2rem 0rem;
+    border-radius: 25px;
+    font-size: 1.4rem;
+  }
+  button {
+    border: none;
+    border-radius: 25px;
+    background: #ffffff06;
+    backdrop-filter: blur(50px);
+    border: 1px solid #ffffff1a;
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    gap: 3rem;
+    padding: 0.6rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .genu {
+    font-size: 1.8rem;
+
+    color: #ffffff84;
+    font-weight: 700;
+  }
+
+  .gen {
+    margin: 1rem 0rem;
+  }
+  .card {
+    display: inline-block;
+
+    padding: 2rem 2rem;
+    border-radius: 25px;
+    background: #ffffff06;
+    backdrop-filter: blur(50px);
+    color: rgba(255, 255, 255, 0.875);
+    border: 1px solid #ffffff1a;
+
+    max-width: 18rem;
+    width: 100%;
+  }
+
+  .sv {
+    color: var(--gold-700);
+  }
+
+  .tit {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    margin: 0.5rem 0rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-weight: 400;
+    color: #ffffff51;
+  }
+  @media (max-width: 768px) {
+    .demo {
+      padding: 0rem 2rem;
+      margin: 4rem 0rem;
+    }
+    .gall {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .can {
+      width: 100%;
+    }
+    .card {
+      max-width: 15rem;
+    }
+    button {
+      font-size: 1.2rem;
+
+      gap: 1.1rem;
+    }
+  }
+</style>

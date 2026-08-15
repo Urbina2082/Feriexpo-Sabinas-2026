@@ -1,0 +1,31 @@
+---
+import type { GetStaticPaths } from "astro";
+import { artistas } from "../../Data/Artistas";
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../Sections/Artistas/Hero.astro";
+import Info from "../../Sections/Artistas/Info.astro";
+import Demo from "../../Sections/Artistas/Demo.astro";
+import Footer from "../../Sections/Footer.astro";
+
+export function getStaticPaths() {
+  return artistas.map((artista) => ({
+    params: {
+      slug: artista.slug,
+    },
+    props: {
+      artista,
+    },
+  }));
+}
+
+const { artista } = Astro.props;
+---
+
+<Layout title={artista.nombre}
+  description={`${artista.fecha} · ${artista.genero}`}
+  image={artista.im}>
+  <Hero artista={artista} />
+  <Info artista={artista} />
+  <Demo artista={artista}/>
+  <Footer loading="lazy" />
+</Layout>
