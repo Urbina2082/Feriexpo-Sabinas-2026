@@ -5,6 +5,7 @@ const { artista } = Astro.props;
 <div class="demo">
   <div class="canciones">
     <h4>Canciones Mas Populares</h4>
+
     <div class="can">
       <a href={artista.can1noml}><span>01</span>{artista.can1nom}</a>
       <a href={artista.can2noml}><span>02</span>{artista.can2nom}</a>
@@ -12,25 +13,31 @@ const { artista } = Astro.props;
       <a href={artista.can4noml}><span>04</span>{artista.can4nom}</a>
       <a href={artista.can5noml}><span>05</span>{artista.can5nom}</a>
     </div>
+    <small>( Haz clic para reproducir la canción ) </small>
   </div>
   <div class="galy">
     <div class="ful-img" id="fulImgBox">
-      <img src={artista.url1} id="fulImg" alt=""  style="width: 100%; height: auto;" />
+      <img
+        src={artista.url1}
+        id="fulImg"
+        alt=""
+        style="width: 100%; height: auto;"
+      />
       <span onclick="closeImg()">X</span>
     </div>
-    <h4>Galeria</h4>
+    <h4>Momentos Especiales</h4>
     <div class="gall">
       <div class="bloq">
-        <img src={artista.url1}  onclick="openFulImg(this.src)" alt="" />
+        <img src={artista.url1} onclick="openFulImg(this.src)" alt="" />
       </div>
       <div class="bloq">
-        <img src={artista.url2}  onclick="openFulImg(this.src)" alt="" />
+        <img src={artista.url2} onclick="openFulImg(this.src)" alt="" />
       </div>
       <div class="bloq">
-        <img src={artista.url3}  onclick="openFulImg(this.src)" alt="" />
+        <img src={artista.url3} onclick="openFulImg(this.src)" alt="" />
       </div>
       <div class="bloq">
-        <img src={artista.url4}  onclick="openFulImg(this.src)" alt="" />
+        <img src={artista.url4} onclick="openFulImg(this.src)" alt="" />
       </div>
     </div>
   </div>
@@ -112,6 +119,10 @@ const { artista } = Astro.props;
 </script>
 
 <style>
+  small {
+    color: #ffffff73;
+    padding: 30px 0px;
+  }
   .demo {
     padding: 0rem 4rem;
     margin: 4rem 0rem;
