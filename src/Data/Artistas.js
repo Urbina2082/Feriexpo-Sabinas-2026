@@ -127,6 +127,8 @@ Formado en 1989, el grupo alcanzó gran popularidad durante la década de los 90
     url4: `https://scontent.fntr6-5.fna.fbcdn.net/v/t39.30808-6/474117718_1174777080679687_1940907489579696356_n.jpg?stp=c256.0.1536.1536a_dst-jpg_tt6&cstp=mx1536x1536&_nc_cat=102&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeFQ0nCh8WSGc0zQHMdA7Xa-Apxecd9SprECnF5x31KmsR8SjVHxvwhdUlsrEIRzqVItSYFtsSIJwP_JVkJItN1H&_nc_ohc=h2lvg5eb9f8Q7kNvwFUY5ZY&_nc_oc=Adp7MZt7f_DQ7EOnVGbNUHHUV1Ze7hNlEoMoOy_l96sgikUtX4NsH2C3HnlnMIFdB0R2XwY7sn3vD4DLgSVbk-Lx&_nc_zt=23&_nc_ht=scontent.fntr6-5.fna&_nc_gid=NNocp6vgkrmx06FriBupVQ&_nc_ss=7b2a8&oh=00_AQHbcMMYH7R06JaUe4CtM6b_POfdmNwyqD2e1Y67_FtK0w&oe=6A884BA2`, // Boletos
     vip: false,
     linkVip: ``,
+
+    //demas
   },
   {
     slug: "los-invasores-de-nuevo-leon",
