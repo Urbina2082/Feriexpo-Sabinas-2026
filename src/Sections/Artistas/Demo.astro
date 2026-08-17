@@ -14,19 +14,23 @@ const { artista } = Astro.props;
     </div>
   </div>
   <div class="galy">
+    <div class="ful-img" id="fulImgBox">
+      <img src={artista.url1} id="fulImg" alt=""  style="width: 100%; height: auto;" />
+      <span onclick="closeImg()">X</span>
+    </div>
     <h4>Galeria</h4>
     <div class="gall">
       <div class="bloq">
-        <img src={artista.url1} alt="" />
+        <img src={artista.url1}  onclick="openFulImg(this.src)" alt="" />
       </div>
       <div class="bloq">
-        <img src={artista.url2} alt="" />
+        <img src={artista.url2}  onclick="openFulImg(this.src)" alt="" />
       </div>
       <div class="bloq">
-        <img src={artista.url3} alt="" />
+        <img src={artista.url3}  onclick="openFulImg(this.src)" alt="" />
       </div>
       <div class="bloq">
-        <img src={artista.url4} alt="" />
+        <img src={artista.url4}  onclick="openFulImg(this.src)" alt="" />
       </div>
     </div>
   </div>
@@ -92,6 +96,20 @@ const { artista } = Astro.props;
     </div>
   </div>
 </div>
+
+<script>
+  const fulImgBox = document.getElementById("fulImgBox"),
+    fulimg = document.getElementById("fulImg");
+
+  window.openFulImg = function (src) {
+    fulImgBox.style.display = "flex";
+    fulimg.src = src;
+  };
+
+  window.closeImg = function () {
+    fulImgBox.style.display = "none";
+  };
+</script>
 
 <style>
   .demo {
@@ -232,6 +250,36 @@ const { artista } = Astro.props;
     font-weight: 400;
     color: #ffffff83 !important;
   }
+
+  .ful-img {
+    width: 100%;
+    height: 100vh;
+    background: #000000e3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ful-img img {
+    width: auto;
+    height: auto;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  .ful-img span {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+
   @media (max-width: 768px) {
     .demo {
       padding: 0rem 1rem;
