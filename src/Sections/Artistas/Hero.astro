@@ -7,15 +7,41 @@ const { artista } = Astro.props;
   style={`--imagen-desktop: url('${artista.im}'); --imagen-mobile: url('${artista.imMobile}');`}
 >
   <div class="info">
-    <span
-      ><svg
+    <span class="art">
+      <!-- <svg
         class="gen"
         xmlns="http://www.w3.org/2000/svg"
         width="17"
         height="17"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="currentColor"
+        stroke="#fff"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        data-astro-cid-eesvpkgy=""
+        ><path d="M9 18V5l12-2v13" data-astro-cid-eesvpkgy=""></path><circle
+          cx="6"
+          cy="18"
+          r="3"
+          data-astro-cid-eesvpkgy=""></circle><circle
+          cx="18"
+          cy="16"
+          r="3"
+          data-astro-cid-eesvpkgy=""></circle></svg
+      > -->
+      ARTISTA CONFIRMADO</span
+    >
+    <h2>{artista.nombre}</h2>
+    <span>
+      <svg
+        class="gen"
+        xmlns="http://www.w3.org/2000/svg"
+        width="17"
+        height="17"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#fff"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -32,7 +58,6 @@ const { artista } = Astro.props;
       >
       {artista.genero}</span
     >
-    <h2>{artista.nombre}</h2>
     <!-- <div class="pre-inf">
       <p>
         <svg
@@ -109,7 +134,7 @@ const { artista } = Astro.props;
             height="19"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#000"
+            stroke="#fff"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -162,7 +187,8 @@ const { artista } = Astro.props;
     const texto = encodeURIComponent("Mira este artista:");
 
     window.open(`https://wa.me/?text=${texto}%20${url}`, "_blank");
-  });a
+  });
+  ;
 </script>
 
 <style>
@@ -183,19 +209,24 @@ const { artista } = Astro.props;
     bottom: 2rem;
   }
   span {
-    background: #ee850c;
-    color: #000000;
+    background: #fffdfc00;
+    color: #fffbfba7;
     font-weight: 500;
-    padding: 0.5rem 1.5rem;
+    padding: 0rem;
+    margin: 0px 0px 20px;
     border-radius: 25px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     display: inline-flex;
     gap: 0.3rem;
     align-items: center;
   }
 
+  .art{
+    margin: 0px;
+  }
+
   h2 {
-    font-size: clamp(2.5rem, 4vw, 6rem);
+    font-size: clamp(2.9rem, .5vw, 8rem);
     margin: 15px 0px;
     font-weight: 900;
   }
@@ -222,8 +253,8 @@ const { artista } = Astro.props;
   }
 
   button {
-    background: #ee850c;
-    color: rgb(0, 0, 0);
+    background: var(--gradient-title);
+    color: rgb(255, 255, 255);
     border: none;
     padding: 0.7rem 1.5rem;
     border-radius: 25px;
@@ -240,7 +271,7 @@ const { artista } = Astro.props;
   .comp {
     background: rgba(0, 0, 0, 0.11);
     color: rgb(254, 254, 255);
-    border: solid 1px #ffffff17;
+    border: solid 1px #ffffff53;
   }
 
   @media (max-width: 768px) {

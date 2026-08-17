@@ -14,25 +14,25 @@ const { artista } = Astro.props;
     </div>
   </div>
   <div class="galy">
-    <h4>Galleria</h4>
+    <h4>Galeria</h4>
     <div class="gall">
       <div class="bloq">
-        <img src="/Artistas/Barron-im-mov.avif" alt="" />
+        <img src={artista.url1} alt="" />
       </div>
       <div class="bloq">
-        <img src="/Artistas/Barron-im-mov.avif" alt="" />
+        <img src={artista.url2} alt="" />
       </div>
       <div class="bloq">
-        <img src="/Artistas/Barron-im-mov.avif" alt="" />
+        <img src={artista.url3} alt="" />
       </div>
       <div class="bloq">
-        <img src="/Artistas/Barron-im-mov.avif" alt="" />
+        <img src={artista.url4} alt="" />
       </div>
     </div>
   </div>
 
   <div class="boletos" id="Boletos">
-    <h4>Boletos disponibles para esta presentacion</h4>
+    <h4>Boletos disponibles</h4>
 
     {
       artista.vip ? (
@@ -40,7 +40,7 @@ const { artista } = Astro.props;
           <a href={artista.linkVip}>
             <button>
               Boletos VIP
-              <span>
+              <p class="lx">
                 Comprar
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ const { artista } = Astro.props;
                   height="24"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="currentColor"
+                  stroke="#ffffff83"
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -59,7 +59,7 @@ const { artista } = Astro.props;
                   <path d="M15 16l4 -4" />
                   <path d="M15 8l4 4" />
                 </svg>
-              </span>
+              </p>
             </button>
           </a>
         </div>
@@ -78,7 +78,7 @@ const { artista } = Astro.props;
           height="34"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="currentColor"
+          stroke="#2563EB"
           stroke-width="2"
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -99,8 +99,8 @@ const { artista } = Astro.props;
     margin: 4rem 0rem;
   }
   h4 {
-    color: var(--green-700);
-    font-weight: 400;
+    color: #fff;
+    font-weight: 700;
     margin: 0rem;
     font-size: 2rem;
   }
@@ -118,7 +118,10 @@ const { artista } = Astro.props;
     font-size: 1.4rem;
   }
   span {
-    color: var(--green-700);
+    background: var(--gradient-title);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     display: inline-flex;
     align-items: center;
   }
@@ -223,9 +226,15 @@ const { artista } = Astro.props;
     font-weight: 400;
     color: #ffffff51;
   }
+  .lx {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    color: #ffffff83 !important;
+  }
   @media (max-width: 768px) {
     .demo {
-      padding: 0rem 2rem;
+      padding: 0rem 1rem;
       margin: 4rem 0rem;
     }
     .gall {
