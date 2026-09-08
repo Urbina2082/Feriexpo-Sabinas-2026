@@ -9,28 +9,31 @@ const Teatro = [
     fecha: "11 Septiembre 2026",
     hora: "9:00 PM",
     des: "El cantante Ismael Cituk Jr. inaugura la cartelera del Teatro del Pueblo con un espectáculo lleno de música y talento regional.",
+    pos: true,
   },
-  { 
-
+  {
     imagen: "/Teatro/2.avif",
     nombre: "Banda Kañon",
     fecha: "13 Septiembre 2026",
     hora: "9:00 PM",
     des: "Banda Kañon llega con sus grandes éxitos para poner a bailar al público con lo mejor de la música regional mexicana.",
+    pos: true,
   },
   {
-   imagen: "/Teatro/3.avif",
+    imagen: "/Teatro/3.avif",
     nombre: "KPOP Demon Hunters",
     fecha: "14 Septiembre 2026",
     hora: "9:00 PM",
     des: "Espectáculo familiar inspirado en el mundo del K-Pop con música, baile, luces y personajes para todas las edades.",
+    pos: true,
   },
   {
-   imagen: "/Teatro/4.avif",
+    imagen: "/Teatro/4.avif",
     nombre: "La Rondalla",
     fecha: "16 Septiembre 2026",
     hora: "9:00 PM",
     des: "Una velada romántica con La Rondalla, interpretando los clásicos que han marcado generaciones.",
+    pos: true,
   },
   {
     imagen: "/Teatro/5.avif",
@@ -38,6 +41,7 @@ const Teatro = [
     fecha: "17 Septiembre 2026",
     hora: "9:00 PM",
     des: "El exitoso dúo de comedia norteña presenta un espectáculo lleno de humor, ocurrencias y diversión para toda la familia.",
+    pos: true,
   },
   {
     imagen: "/Teatro/6.avif",
@@ -45,6 +49,8 @@ const Teatro = [
     fecha: "18 Septiembre 2026",
     hora: "9:00 PM",
     des: "Show infantil con los personajes inspirados en Toy Story, ideal para disfrutar en familia con música y diversión.",
+
+    pos: true,
   },
   {
     imagen: "/Teatro/7.avif",
@@ -52,20 +58,16 @@ const Teatro = [
     fecha: "19 Septiembre 2026",
     hora: "9:00 PM",
     des: "Gary Show ofrece una noche de entretenimiento, música y un ambiente lleno de energía para todos los asistentes.",
+    pos: true,
   },
   {
-    imagen: "/Teatro/8.avif",
-    nombre: "Kika Edgar",
-    fecha: "20 Septiembre 2026",
-    hora: "9:00 PM",
-    des: "Gran cierre del Teatro del Pueblo con Kika Edgar acompañada por La Única Internacional Sonora Santanera, interpretando los éxitos que han hecho historia.",
-  },
-   {
-    imagen: "/Teatro/9.avif",
+    imagen: "/Teatro/sonora-kike.avif",
     nombre: "La Única Internacional Sonora Santanera",
     fecha: "20 Septiembre 2026",
     hora: "9:00 PM",
     des: "Gran cierre del Teatro del Pueblo con Kika Edgar acompañada por La Única Internacional Sonora Santanera, interpretando los éxitos que han hecho historia.",
+    pos: false,
+    link: `https://jrticket.tickesoft.com/eventos/kika-feri-expo-sabinas-2026`,
   },
 ];
 ---
@@ -87,6 +89,8 @@ const Teatro = [
           fecha={artista.fecha}
           hora={artista.hora}
           des={artista.des}
+          pos={artista.pos}
+          link={artista.link}
         />
       ))
     }

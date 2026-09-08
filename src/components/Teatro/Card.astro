@@ -1,5 +1,5 @@
 ---
-const { im, nombre, fecha, hora, des } = Astro.props;
+const { im, nombre, fecha, hora, des, pos, link } = Astro.props;
 ---
 
 <div class="card">
@@ -52,10 +52,23 @@ const { im, nombre, fecha, hora, des } = Astro.props;
     </div>
     <p>{des}</p>
 
-    <button>GRATUITO</button>
+    {
+      pos ? (
+        <button>GRATUITO</button>
+      ) : (
+        <a href={link}>
+          <button>VIP DISPONIBLE</button>
+        </a>
+      )
+    }
   </div>
 
   <style>
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
     .card {
       display: inline-block;
       border-radius: 25px;
@@ -100,10 +113,10 @@ const { im, nombre, fecha, hora, des } = Astro.props;
     }
 
     .calendar {
-      color:#2563EB;
+      color: #2563eb;
     }
     .clock {
-      color:#2563EB ;
+      color: #2563eb;
     }
 
     .fech p {
