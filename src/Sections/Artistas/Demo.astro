@@ -23,7 +23,8 @@ const { artista } = Astro.props;
         alt=""
         style="width: 100%; height: auto;"
       />
-      <span onclick="closeImg()">X</span>
+      <!-- <span onclick="closeImg()">X</span> -->
+      <button class="close-img" id="closeImg">X</button>
     </div>
     <h4>Momentos Especiales</h4>
     <div class="gall">
@@ -104,9 +105,10 @@ const { artista } = Astro.props;
   </div>
 </div>
 
-<script>
+<!-- <script>
   const fulImgBox = document.getElementById("fulImgBox"),
     fulimg = document.getElementById("fulImg");
+
 
   window.openFulImg = function (src) {
     fulImgBox.style.display = "flex";
@@ -116,9 +118,65 @@ const { artista } = Astro.props;
   window.closeImg = function () {
     fulImgBox.style.display = "none";
   };
+</script> -->
+<script>
+  const fulImgBox = document.getElementById("fulImgBox");
+  const fulimg = document.getElementById("fulImg");
+  const closeButton = document.getElementById("closeImg");
+
+  window.openFulImg = function (src) {
+    fulImgBox.style.display = "flex";
+    fulimg.src = src;
+  };
+
+  closeButton.addEventListener("click", function () {
+    fulImgBox.style.display = "none";
+  });
+
+  // También cerrar haciendo clic fuera de la imagen
+  fulImgBox.addEventListener("click", function (e) {
+    if (e.target === fulImgBox) {
+      fulImgBox.style.display = "none";
+    }
+  });
+
+  // Cerrar con ESC en computadora
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      fulImgBox.style.display = "none";
+    }
+  });
 </script>
 
 <style>
+  .close-img {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+    z-index: 1001;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close-img:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
   small {
     color: #ffffff73;
     padding: 30px 0px;
